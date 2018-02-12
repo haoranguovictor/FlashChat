@@ -18,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class MainChatActivity extends AppCompatActivity {
 
-    // TODO: Add member variables here:
+    // Add member variables here:
     private String mDisplayName;
     private ListView mChatListView;
     private EditText mInputText;
@@ -31,7 +31,7 @@ public class MainChatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_chat);
 
-        // TODO: Set up the display name and get the Firebase reference
+        //Set up the display name and get the Firebase reference
         setupDisplay();
         mDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
@@ -41,7 +41,7 @@ public class MainChatActivity extends AppCompatActivity {
         mSendButton = (ImageButton) findViewById(R.id.sendButton);
         mChatListView = (ListView) findViewById(R.id.chat_list_view);
 
-        // TODO: Send the message when the "enter" button is pressed
+        // Send the message when the "enter" button is pressed
         mInputText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
@@ -59,7 +59,7 @@ public class MainChatActivity extends AppCompatActivity {
         });
     }
 
-    // TODO: Retrieve the display name from the Shared Preferences
+    // Retrieve the display name from the Shared Preferences
     private void setupDisplay(){
 
         SharedPreferences prefs = getSharedPreferences(RegisterActivity.CHAT_PREFS, MODE_PRIVATE);
@@ -71,7 +71,7 @@ public class MainChatActivity extends AppCompatActivity {
 
     private void sendMessage() {
         Log.d("FlashChat", "I sent sth");
-        // TODO: Grab the text the user typed in and push the message to Firebase
+        // Grab the text the user typed in and push the message to Firebase
         String input = mInputText.getText().toString();
         if (!input.equals("")) {
             instantMessage chat = new instantMessage(input, mDisplayName);
@@ -94,7 +94,7 @@ public class MainChatActivity extends AppCompatActivity {
     public void onStop() {
         super.onStop();
         Log.d("FlashChat", "Cleaning up adapter");
-        // TODO: Remove the Firebase event listener on the adapter.
+        // Remove the Firebase event listener on the adapter.
         mAdapter.cleanup();
 
     }
