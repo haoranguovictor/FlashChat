@@ -1,14 +1,14 @@
 {
   "project_info": {
-    "project_number": "1091848020137",
-    "firebase_url": "https://flashchat-1e415.firebaseio.com",
+    "project_number": "",
+    "firebase_url": "",
     "project_id": "flashchat-1e415",
     "storage_bucket": "flashchat-1e415.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1091848020137:android:f152050428029f2a",
+        "mobilesdk_app_id": "",
         "android_client_info": {
           "package_name": "com.haoranchat.flashchatnewfirebase"
         }
@@ -21,7 +21,7 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB5D1E7cnh27qGXW_WcUS_icDDQPu0Nua8"
+          "current_key": ""
         }
       ],
       "services": {
